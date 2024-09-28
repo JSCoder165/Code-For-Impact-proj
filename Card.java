@@ -1,10 +1,11 @@
 public class Card {
-    private int num; //card value from 1-10
+    private int num; 
     private String suit;
     private boolean isJack;
-    public Card(int num, String suit, boolean isJack){
+    public Card(int num, String suit){
         this.num = num;
         this.suit = suit;
+        isJack = num == 11;
     }
 
     public String getSuit(){
@@ -13,6 +14,10 @@ public class Card {
 
     public int getNum(){
         return num;
+    }
+    
+    public boolean isJack() {
+        return isJack;
     }
 
 }
