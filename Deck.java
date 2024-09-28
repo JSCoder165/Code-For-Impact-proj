@@ -10,7 +10,7 @@ public class Deck {
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
         for (String suit : suits) {
             for (int i = 1; i <= 13; i++) {
-                cards.add(new Card(Math.min(i, 10), suit)); 
+                cards.add(new Card(Math.min(i, 10), suit, i==13)); 
             }
         }
         Collections.shuffle(cards);
