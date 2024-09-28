@@ -53,11 +53,13 @@ public class Main {
         
         for (Card card : hand) {
             value += card.getNum();
-            if (card.getNum() == 1) aces++; // Count Aces
+            if (card.isAce()) {
+                aces++; 
+            }
         }
         
         while (value > 21 && aces > 0) {
-            value -= 10; // Adjust for Ace
+            value -= 10; 
             aces--;
         }
         
