@@ -1,7 +1,5 @@
 <script>
 	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
 
 <svelte:head>
@@ -11,21 +9,20 @@
 
 <section>
 	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
+		Gambling To Save The Trees Simulator
+		<img src="/src/routes/thumbnail.png" alt="diagram of how to play game" />
 	</h1>
-
+	<p>
+		Welcome to our Code For Impact Project! In this project, our idea was to have a currency-based system utilizing <br>
+		virtual Coins, which could be gained through watching ADS! Then, we would've taken this money gained from said ads and <br>
+		donated to environmental causes. We also planned that earned coins can be wagered on Blackjack. <br>
+		There was also going to be a granted coin amount upon startup of the web app.
+	</p>
 	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
+		I would say good luck gambling, but ads are not implemented so.. yeah ( •̀ᴗ•́ )
 	</h2>
 
-	<Counter />
+
 </section>
 
 <style>
@@ -39,21 +36,18 @@
 
 	h1 {
 		width: 100%;
+		font-family:'Trebuchet MS';
+		font-weight: bold;
+		color: black
 	}
 
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+	p {
+		font-family: 'Gill Sans';
+		font-size: 20px;
+		color: black;
 	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	h2 {
+		color: green;
+		font-family: fantasy;
 	}
 </style>
